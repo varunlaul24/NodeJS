@@ -35,20 +35,11 @@ require('fs').readdir(process.argv[2], (err, list) => {
 
 
 /*
-    The fs.readdir() method takes a pathname as its first argument and a  
-    callback as its second. The callback signature is:  
-    function callback (err, list) { / ... / }  
-    where list is an array of filename strings.  
-    Documentation on the fs module can be found by pointing your browser here:  
-    file:///home/varun/.nvm/versions/node/v18.13.0/lib/node_modules/learnyouno  
-    de/docs-nodejs/fs.html  
-
+    The fs.readdir() method takes a pathname as its first argument and a callback 
+    as its second. The callback signature is:  
+                function callback (err, list) { / ... / }  
     You may also find node's path module helpful, particularly the extname  
     method.
-    Documentation on the path module can be found by pointing your browser  
-    here:  
-    file:///home/varun/.nvm/versions/node/v18.13.0/lib/node_modules/learnyouno  
-    de/docs-nodejs/path.html
 */
 
 /*
