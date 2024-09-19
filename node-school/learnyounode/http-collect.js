@@ -27,7 +27,6 @@ require('http').get(process.argv[2], (res) => {
 */
 
 require('http').get(process.argv[2], (res) => {
-    res.setEncoding('utf-8')
     res.pipe(require('bl')((err, data) => {
         if (err) {
             return console.error(err);
@@ -39,3 +38,14 @@ require('http').get(process.argv[2], (res) => {
 }).on('error', (e) => {
     console.error(e);
 });
+
+/*
+    There are two approaches you can take to this problem:  
+    1) Collect data across multiple "data" events and append the results  
+    together prior to printing the output. Use the "end" event to determine  
+    when the stream is finished and you can write the output.  
+    2) Use a third-party package to abstract the difficulties involved in  
+    collecting an entire stream of data. Two different packages provide a  
+    useful API for solving this problem (there are likely more!): bl (Buffer  
+    List) and concat-stream; take your pick!  
+*/
